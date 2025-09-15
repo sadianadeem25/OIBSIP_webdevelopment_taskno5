@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribute to Marie Curie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #f9f7f7, #dbe2ef);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(34, 65, 112, 0.8), rgba(34, 65, 112, 0.9)), url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .quote {
+            font-style: italic;
+            margin: 20px auto;
+            max-width: 700px;
+            font-size: 1.2rem;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #ffd700;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .image-section {
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        
+        .caption {
+            font-style: italic;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #224170;
+            margin: 25px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffd700;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .achievements {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .achievement-card {
+            background: #f9f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .achievement-icon {
+            font-size: 2.5rem;
+            color: #224170;
+            margin-bottom: 15px;
+        }
+        
+        .timeline {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-date {
+            min-width: 120px;
+            font-weight: bold;
+            color: #224170;
+        }
+        
+        .timeline-content {
+            border-left: 3px solid #ffd700;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #224170;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .social-links {
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #ffd700;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #224170;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .button:hover {
+            background: #1a3157;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Marie Curie</h1>
+            <div class="subtitle">The First Woman to Win a Nobel Prize</div>
+            <div class="quote">"Nothing in life is to be feared, it is only to be understood. Now is the time to understand more, so that we may fear less."</div>
+        </header>
+        
+        <div class="content">
+            <div class="main-content">
+                <h2>About Marie Curie</h2>
+                <p>Marie Skłodowska Curie (1867–1934) was a Polish and naturalized-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person and only woman to win the Nobel Prize twice, and the only person to win the Nobel Prize in two different scientific fields.</p>
+                
+                <p>Her achievements included the development of the theory of radioactivity (a term she coined), techniques for isolating radioactive isotopes, and the discovery of two elements, polonium and radium. Under her direction, the world's first studies were conducted into the treatment of neoplasms using radioactive isotopes.</p>
+                
+                <p>Despite becoming a French citizen, Marie Curie never lost her sense of Polish identity. She taught her daughters the Polish language and took them on visits to Poland. She named the first chemical element she discovered polonium, after her native country.</p>
+                
+                <h2>Her Legacy</h2>
+                <p>Marie Curie's legacy is immense. She not only made groundbreaking discoveries but also broke barriers for women in science. Her work paved the way for numerous advancements in medicine, particularly in the field of oncology.</p>
+                
+                <p>Curie founded the Curie Institutes in Paris and Warsaw, which remain major centers of medical research today. During World War I, she developed mobile radiography units to provide X-ray services to field hospitals, saving countless lives.</p>
+            </div>
+            
+            <div class="image-section">
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Marie Curie in her laboratory" class="profile-img">
+                <div class="caption">Marie Curie in her laboratory, circa 1900</div>
+                
+                <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Radioactivity research" class="profile-img">
+                <div class="caption">Early research on radioactivity</div>
+                
+                <a href="#" class="button">Learn More About Marie Curie</a>
+            </div>
+        </div>
+        
+        <div class="achievements">
+            <h2>Major Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Nobel Prize in Physics</h3>
+                    <p>Awarded in 1903 for research on radiation phenomena</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Nobel Prize in Chemistry</h3>
+                    <p>Awarded in 1911 for discovery of radium and polonium</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Discovery of Elements</h3>
+                    <p>Discovered polonium and radium</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Medical Advances</h3>
+                    <p>Pioneered radiation therapy for cancer</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline">
+            <h2>Timeline of Marie Curie's Life</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1867</div>
+                <div class="timeline-content">
+                    <h3>Born in Warsaw</h3>
+                    <p>Maria Skłodowska was born in Warsaw, Poland</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1891</div>
+                <div class="timeline-content">
+                    <h3>Moved to Paris</h3>
+                    <p>Moved to Paris to study at the Sorbonne</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1895</div>
+                <div class="timeline-content">
+                    <h3>Married Pierre Curie</h3>
+                    <p>Married French physicist Pierre Curie</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1898</div>
+                <div class="timeline-content">
+                    <h3>Discovery of Polonium and Radium</h3>
+                    <p>Discovered the elements polonium and radium</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1903</div>
+                <div class="timeline-content">
+                    <h3>First Nobel Prize</h3>
+                    <p>Awarded Nobel Prize in Physics with Pierre Curie and Henri Becquerel</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1911</div>
+                <div class="timeline-content">
+                    <h3>Second Nobel Prize</h3>
+                    <p>Awarded Nobel Prize in Chemistry</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">1934</div>
+                <div class="timeline-content">
+                    <h3>Death</h3>
+                    <p>Died from aplastic anemia, likely caused by exposure to radiation</p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Created with admiration for Marie Curie's contributions to science</p>
+            <p>"I was taught that the way of progress was neither swift nor easy." - Marie Curie</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
